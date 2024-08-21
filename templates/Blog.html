@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Br</title>
+    <link rel="stylesheet" href="/estilo/Blog.css">
+</head>
+<body>
+    <h1> LISTA DE POSTAGENS </h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titulo</th>
+                <th>Conteudo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuarios %}
+            <!-- voce cria a variavel usuario e ela recebe os conteudos de usuarios -->
+            <tr>
+                <td class="td">{{ usuario.Id }}</td>
+                <td class="td">{{ usuario.Titulo }}</td>
+                <td class="td">{{ usuario.Conteudo }}</td>
+            <tr>
+            
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+</html>
